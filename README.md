@@ -91,3 +91,9 @@ One has to **safely** tear down a part of existing development-operations cycle 
 ## Conclusion:
 
 The idea is straightforward here. The **transition** from being a sysadmin or a developer to a DevOps engineer is in itself the primary skill a DevOps engineer possesses. Learning a new technology takes a day or few to master it whereas it takes an organisation to technologically scale and mature to produce a DevOps engineer.
+
+Comments
+
+- Drew those flow diagrams in [draw.io](https://www.draw.io)
+
+- One can skim through some profiles on [Toptal](https://www.toptal.com/devops) to see their journeys
