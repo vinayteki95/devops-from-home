@@ -18,15 +18,15 @@ Don't believe me?
 
 So it's a philosophy, set of practices, collaboration of different teams, culture with a mission to deliver quality software.
 
-But there is a problem here. Why do people hire DevOps engineers? Let me rephrase the question to a more concrete one. **What/who is a DevOps engineer?**
+But there is a problem here. Why do people hire DevOps engineers? Let me rephrase the question to a more fundamental one. **What/who is a DevOps engineer?**
 
 Every DevOps tutorial/course I've seen so far mentioned the idea of **software development life cycle** and how DevOps addresses some inadequacies of previous methods like waterfall and agile techniques.
 
 ![agile-vs-devops](images/agile-vs-devops.jpg)
 
-But if you look closely and try to understand the transformation from agile to devops, agile already had the structure of workflow figured out. DevOps simply **automated** a bunch of these operations.
+But if you look closely and try to understand the transformation from agile to devops, agile already had the structure of workflow figured out. DevOps simply **automated** a bunch of these operations and a major chunk of agile's problems were solved and a new flow emerged naturally.
 
-Now it makes sense why we need an engineer to solve our **software development life cycle** problem.
+Now it makes sense why we need an **engineer** to solve our **software development life cycle** problems.
 
 ## The learning strategy
 
