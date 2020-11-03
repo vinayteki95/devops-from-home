@@ -54,15 +54,15 @@ You study a little about continuous testing and introduce Jenkins in your archit
 
 ![devops_evolution](images/devops_evolution_5.jpg)
 
-Great atleast there are no bugs in the codebase. But the problems is everyone uses a different version of packages on their personal machine while developing and testing. You introduce "Docker". You'll probably recieve a bit of hate in the beginning for making the developers write Dockerfiles but you can create a bunch of base images for most application types.
+Great atleast there are no bugs in the codebase. But the problem is everyone uses a different version of packages on their personal machine while developing and testing. You introduce "Docker". You'll probably recieve a bit of hate in the beginning for making the developers write Dockerfiles but you can create a bunch of base images for most application environments.
 
 ![devops_evolution](images/devops_evolution_6.jpg)
 
-Deployment has been a lot easier with docker but the number of applications we provide for our clients have increased exponentially after the last funding. You introduce container management tool like ansible to configure servers (bare machines / virtual machines) so that you don't have to configure one at a time or not able to achieve idempotency with your scripts.
+Deployment has been a lot easier with docker but the number of applications we provide for our clients have increased exponentially after the last funding. You introduce container management tool like ansible to configure servers (bare machines / virtual machines) so that you don't have to configure each one sequencially and manually. Also you can version control configuration files.
 
 ![devops_evolution](images/devops_evolution_7.jpg)
 
-Now that we have a bunch of server and applications running, it has become a 24hrs job of monitoring your servers and fixing them on the go when there is too much traffic. This is absorbing your attention span entirely and if you are on a holiday, all hell breaks loose. You introduce "Monitoring systems like nagios/prometheus" to keep an eye on the applications and "alert" you when anything looks fishy.
+Now that we have a bunch of server and applications running, it has become a 24hrs job of monitoring your servers and fixing them on the go when there is too much traffic. This is consuming your attention entirely and if you are on a holiday, all hell breaks loose. You introduce "Monitoring systems like nagios/prometheus" to keep an eye on the applications and "alert" you when something seems fishy.
 
 ![devops_evolution](images/devops_evolution_8.jpg)
 
@@ -70,28 +70,25 @@ Everytime you have to setup a new server, you manually provision the server, set
 
 ![devops_evolution](images/devops_evolution_9.jpg)
 
-Lot of microservices are utilised exesively in working hours and stay completely idle at nights. Everytime there is a huge amount of traffic you have to provision the server and later on destroy them when not at use. You bring a huge change into your infra this time. "Kubernetes". You use this "container orchestration tool" to manage your cluster, autoscale applications when necessary, isolate logically and deploy in a single click.
+Lot of microservices are utilised exesively in working hours and stay completely idle at nights. Everytime there is a huge amount of traffic you have to provision new machines and destroy them when not in use. You bring a huge change into your infra this time. "Kubernetes". You use this "container orchestration tool" to manage your cluster, autoscale applications when necessary, isolate logically and deploy applications just using configuration files.
 
 ### The motivation behind this thought experiment is simple and necessary.
 
-DevOps is not learning a bunch of tools and implementing a complicated architecute like in the last image. DevOps engineer should always identify the problem at hand and introduce solutions.
+We have endless number of technologies which tackle various scenarios and it is impossible to master them all at once. One should be a **participant in the journey** of developing such a sophisticated system organically. The experiment shows just that.
 
-We have endless number of technologies which tackle various scenarios and it is impossible to master them all at once. One should be a **participant in the journey** of developing such a sophisticated system organically.
-
-### What is the strategy then?
+### What is the learning strategy then?
 
 - Simulate a scenario like the one we explored earlier
-- Build a stable infrastructure for each iteration
+- Build a stable infrastructure for each iteration (you can use a sample application for the time being)
 - Only then introduce/visualize a new inadequency of the current system
 - This will inevitably make you realise what sort of a technology/solution you need.
+- Find a way to make changes to your infrastructure without causing a downtime
 
 ### Why will this work?
 
 It is absolutely crucial to be a part of the journey because that is precisely what a DevOps engineer has to do on the field.
 
-One has to **safely** tear down a part of existing development and operations cycle and introduce enhanched solutions
-
-To be able to maintain a stable infrastructure which one is still tweaking it is one of the necessary skills and impossible to learn without being a part of the journey.
+One has to **safely** tear down a part of existing development-operations cycle and introduce enhanched solutions without any downtime
 
 ## Conclusion:
 
