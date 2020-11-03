@@ -38,39 +38,39 @@ To answer this question lets do a thought experiment. Say you just joined at a s
 
 ![devops_evolution](images/devops_evolution_1.jpg)
 
-    There you are provisioning servers, managing them, deploying new feature updates, monitoring the performance of the application and generating reports. (Most of them manually, maybe a few shell scripts)
+There you are provisioning servers, managing them, deploying new feature updates, monitoring the performance of the application and generating reports. (Most of them manually, maybe a few shell scripts)
 
 ![devops_evolution](images/devops_evolution_2.jpg)
 
-    The frequency of bugs and redeploying older versions every other day is too exausting. You introduce test driven programming (unit tests) and the developer writes some pre-commit git hooks to run tests everytime there is a commit. Sincere developer, thank god.
+The frequency of bugs and redeploying older versions every other day is too exausting. You introduce test driven programming (unit tests) and the developer writes some pre-commit git hooks to run tests everytime there is a commit. Sincere developer, thank god.
 
 ![devops_evolution](images/devops_evolution_3.jpg)
 
-    New hires, interns bypassing git hooks by a single option on the command line `git commit --no-verify` and we are doomed again. And sadly git hooks are not commited into the repository.
+New hires, interns bypassing git hooks by a single option on the command line `git commit --no-verify` and we are doomed again. And sadly git hooks are not commited into the repository.
 
 ![devops_evolution](images/devops_evolution_4.jpg)
 
-    You study a little about continuous testing and introduce Jenkins in your architecture. You deploy a "Jenkins" server and create a "test stage".
+You study a little about continuous testing and introduce Jenkins in your architecture. You deploy a "Jenkins" server and create a "test stage".
 
 ![devops_evolution](images/devops_evolution_5.jpg)
 
-    Great atleast there are no bugs in the codebase. But the problems is everyone uses a different version of packages on their personal machine while developing and testing. You introduce "Docker". You'll probably recieve a bit of hate in the beginning for making the developers write Dockerfiles but you can create a bunch of base images for most application types.
+Great atleast there are no bugs in the codebase. But the problems is everyone uses a different version of packages on their personal machine while developing and testing. You introduce "Docker". You'll probably recieve a bit of hate in the beginning for making the developers write Dockerfiles but you can create a bunch of base images for most application types.
 
 ![devops_evolution](images/devops_evolution_6.jpg)
 
-    Deployment has been a lot easier with docker but the number of applications we provide for our clients have increased exponentially after the last funding. You introduce container management tool like ansible to configure servers (bare machines / virtual machines) so that you don't have to configure one at a time or not able to achieve idempotency with your scripts.
+Deployment has been a lot easier with docker but the number of applications we provide for our clients have increased exponentially after the last funding. You introduce container management tool like ansible to configure servers (bare machines / virtual machines) so that you don't have to configure one at a time or not able to achieve idempotency with your scripts.
 
 ![devops_evolution](images/devops_evolution_7.jpg)
 
-    Now that we have a bunch of server and applications running, it has become a 24hrs job of monitoring your servers and fixing them on the go when there is too much traffic. This is absorbing your attention span entirely and if you are on a holiday, all hell breaks loose. You introduce "Monitoring systems like nagios/prometheus" to keep an eye on the applications and "alert" you when anything looks fishy.
+Now that we have a bunch of server and applications running, it has become a 24hrs job of monitoring your servers and fixing them on the go when there is too much traffic. This is absorbing your attention span entirely and if you are on a holiday, all hell breaks loose. You introduce "Monitoring systems like nagios/prometheus" to keep an eye on the applications and "alert" you when anything looks fishy.
 
 ![devops_evolution](images/devops_evolution_8.jpg)
 
-    Everytime you have to setup a new server, you manually provision the server, setup vpc, subnets, gateways, volumes and then run ansible to configure it. This is a repetition. "Infrastructe as Code" to the rescue. You start looking into hashicorps tools and start using "terraform" to provision infra in configuration language.
+Everytime you have to setup a new server, you manually provision the server, setup vpc, subnets, gateways, volumes and then run ansible to configure it. This is a repetition. "Infrastructe as Code" to the rescue. You start looking into hashicorps tools and start using "terraform" to provision infra in configuration language.
 
 ![devops_evolution](images/devops_evolution_9.jpg)
 
-    Lot of microservices are utilised exesively in working hours and stay completely idle at nights. Everytime there is a huge amount of traffic you have to provision the server and later on destroy them when not at use. You bring a huge change into your infra this time. "Kubernetes". You use this "container orchestration tool" to manage your cluster, autoscale applications when necessary, isolate logically and deploy in a single click.
+Lot of microservices are utilised exesively in working hours and stay completely idle at nights. Everytime there is a huge amount of traffic you have to provision the server and later on destroy them when not at use. You bring a huge change into your infra this time. "Kubernetes". You use this "container orchestration tool" to manage your cluster, autoscale applications when necessary, isolate logically and deploy in a single click.
 
 ### The motivation behind this thought experiment is simple and necessary.
 
